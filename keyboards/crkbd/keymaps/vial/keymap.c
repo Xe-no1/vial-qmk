@@ -69,6 +69,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
+// Set the "handedness" of the layout for chordal hold
+// keys on the left are 'L' and on the right are 'R'
+// '*' exempts the key from the chordal hold (useful for thumb keys)
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
+    LAYOUT_split_3x6_3_ex2(
+        'L', 'L', 'L', 'L', 'L', 'L','L',   'R','R', 'R', 'R', 'R', 'R', 'R',
+        'L', 'L', 'L', 'L', 'L', 'L','L',   'R','R', 'R', 'R', 'R', 'R', 'R',
+        'L', 'L', 'L', 'L', 'L', 'L',           'R', 'R', 'R', 'R', 'R', 'R',
+                       '*', '*', '*',           '*', '*', '*'
+    );
+
 #ifdef OLED_ENABLE
 #include <stdio.h>
 
